@@ -1,0 +1,135 @@
+.topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #EEEEEE;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.path {
+    display: flex;
+    gap: 1rem;
+}
+
+.path-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #AFAFAF;
+}
+
+.current {
+    color: black;
+}
+
+.three-dots {
+    font-size: 1.5rem;
+    margin-top: -0.75rem;
+}
+
+.panel {
+    height: 20px;
+    width: 24px;
+    border: 2px solid #618666;
+    border-radius: 4px;
+    display: flex;
+}
+.panel .three{
+    height: 20px;
+    width: 16px;
+}
+
+.panel .one{
+    height: 20px;
+    width: 8px;
+    background-color: #618666;
+}
+
+.actions-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search input {
+    height: 40px;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: #F6F6F6;
+    border: none;
+    border-radius: 10px;
+    color: #757575;
+}
+
+.bell{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.bell-icon {
+    width: 40px;
+    height: 40px;
+}
+  
+.badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #4B6A4F;
+    color: white;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.profile-block {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #E5E9E9;
+}
+
+.profile-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.user-details {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-details p {
+    margin: 0;
+}
+
+.name {
+    font-size: 1rem;
+}
+
+.username {
+    font-size: 0.75rem;
+    color: #757575;
+}
