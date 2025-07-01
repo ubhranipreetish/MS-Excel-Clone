@@ -24,7 +24,7 @@ export default function TopBar(){
                     </div>
                     <div className="bell">
                         <span class="badge">2</span>
-                        <img src="/Images/bell.png" class="bell-icon" alt="Notification Bell" />
+                        <img src="/Images/bell.png" className="bell-icon" alt="Notification Bell" />
                     </div>
                     <div className="profile-block">
                         <div className="profile-img">
