@@ -5,8 +5,8 @@
 }
   
 .excel-grid {
-    border-collapse: collapse;
-
+    border-collapse: separate;
+    border-spacing: 1px;
 }
 
 .excel-grid td {

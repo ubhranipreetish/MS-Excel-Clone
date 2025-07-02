@@ -14,13 +14,16 @@ export default function TopBar(){
                         <span>&gt;</span>
                         <span>Folder 2</span>
                         <span>&gt;</span>
-                        <span className='current'>Spreadsheeet 3</span>
-                        <span className='three-dots'>...</span>
+                        <div className="current-dots">
+                            <span className='current'>Spreadsheeet 3</span>
+                            <span className='three-dots'>...</span>
+                        </div>
                     </div>
                 </div>
                 <div className="actions-right">
                     <div className="search">
-                        <input type='text' placeholder='🔍 Search within sheet' />
+                        <span>🔍</span>
+                        <input type='text' placeholder='Search within sheet' />
                     </div>
                     <div className="bell">
                         <span class="badge">2</span>
@@ -32,7 +35,7 @@ export default function TopBar(){
                         </div>
                         <div className="user-details">
                             <p className='name'>John Doe</p>
-                            <p className='username'>john.doe...</p>
+                            <p className='username'>john.doe@companyname.com</p>
                         </div>
                     </div>
 
