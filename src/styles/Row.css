@@ -1,4 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+
+
 .row {
-    height: 60px;
+    height: 48px;
     border: 1px solid #EEEEEE;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    padding: 6px 8px;
+    box-sizing: border-box;
+}
+
+.toolbar-text {
+    padding: 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.toolbar-text img {
+    height: 16px;
+    width: 16px;
+}
+
+.straight-line {
+    height: 24px;
+    width: 1px;
+    border-right: 1px solid #EEEEEE;
+}
+
+.table-controls {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.control-childs {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.control-childs img {
+    height: 20px;
+    width: 20px;
+}
+
+.row-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.actions-childs {
+    padding: 8px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid #EEEEEE;
+    border-radius: 6px;
+}
+
+.actions-childs img {
+    height: 20px;
+    width: 20px;
+}
+
+.new-action {
+    padding: 8px 24px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 6px;
+    background-color: #4B6A4F;
+    color: #FFFFFF;
+}
+
+.new-action img {
+    height: 20px;
+    width: 20px;
 }

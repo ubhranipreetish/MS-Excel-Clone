@@ -68,12 +68,14 @@
     height: 16px;
 }
 
-.above-th {
-    font-size: 14px;
+.aboveth {
+    font-size: 14px !important;
+    padding: 0 1rem !important;
 }
 
 .above-th2 {
     background-color: #E2E2E2 !important;
+    padding: 0 0.5rem !important;
 }
 
 .above-th2-cnt {
@@ -89,7 +91,8 @@
     gap: 4px;
     background-color: #EEEEEE;
     border-radius: 4px;
-    font-weight: normal;
+    font-weight: 500;
+    box-sizing: border-box;
 }
 
 .above-th2-content img {
@@ -99,12 +102,13 @@
 
 
 .th-content2 {
-    padding: 0 4px;
+    padding: 2px 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 4px;
     font-weight: 500;
+    box-sizing: border-box;
 }
 
 .th-content2 .three-dots {
