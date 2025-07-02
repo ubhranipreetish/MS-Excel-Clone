@@ -80,7 +80,11 @@
     background-color: #F6F6F6;
     border: none;
     border-radius: 10px;
-    font-size: 12px;
+}
+
+.search img {
+    height: 16px;
+    width: 16px;
 }
 
 .search input {
@@ -88,6 +92,9 @@
     background-color: #F6F6F6;
     color: #757575;
     border: none;
+    font-size: 12px;
+    width: 117px;
+    
 }
 
 .bell{

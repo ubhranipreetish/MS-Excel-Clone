@@ -38,3 +38,15 @@
     box-sizing: border-box;
     font-weight: 600;
 }
+
+.add-new {
+    padding: 8px 4px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-new img {
+    height: 28px;
+    width: 28px;
+}

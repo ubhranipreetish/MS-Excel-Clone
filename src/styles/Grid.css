@@ -29,16 +29,19 @@
     font-family: 'Work Sans', sans-serif;
 }
 
-.row-no {
-    width: 32px;
-}
+
 
 .excel-grid th {
     background-color: #EEEEEE;
     color: #757575;
-    text-align: left !important;
+    text-align: left;
     font-size: 12px;
     font-weight: 600;
+}
+
+.row-no {
+    width: 32px;
+    text-align: center !important;
 }
   
 .excel-grid .col-a {
@@ -201,4 +204,11 @@
     border-left: 1px dashed #CBCBCB !important;
     border-right: 1px dashed #CBCBCB !important;
 }
-  
+
+.selected-cell {
+    outline: 1px solid #6C8B70;
+    box-sizing: border-box;
+    z-index: 1;
+    box-shadow: 0 4px 4px #0A6E3D;
+
+}
