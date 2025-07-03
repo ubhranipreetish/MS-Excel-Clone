@@ -77,12 +77,12 @@ const grid_content = [
     "Kevin Smith",
     "Low",
     "30-01-2025",
-    "2,800,000 ₹"
-  ]
+    "2,800,000 ₹",
+  ],
 ];
 
 function print(text) {
-    console.log(`Clicked on ${text}`)
+  console.log(`Clicked on ${text}`);
 }
 
 const Grid = () => {
@@ -105,7 +105,7 @@ const Grid = () => {
       if (!["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key))
         return;
 
-      e.preventDefault(); 
+      e.preventDefault();
 
       let { row, col } = selectedCell;
       if (e.key === "ArrowUp") row = Math.max(0, row - 1);
@@ -133,7 +133,10 @@ const Grid = () => {
           <tr>
             <th className="above-th1 aboveth"></th>
             <th className="above-th2 aboveth" colSpan={4}>
-              <div className="above-th2-cnt" onClick={() => print('Q3 Financial Overview')}>
+              <div
+                className="above-th2-cnt"
+                onClick={() => print("Q3 Financial Overview")}
+              >
                 <div className="above-th2-content">
                   <img src="/Images/link.png" alt="icon" className="th-icon" />
                   <span>Q3 Financial Overview</span>
@@ -143,7 +146,7 @@ const Grid = () => {
             </th>
             <th className="above-th6 aboveth"></th>
             <th className="above-th7 aboveth">
-              <div className="th-content2" onClick={() => print('ABC')}>
+              <div className="th-content2" onClick={() => print("ABC")}>
                 <div className="img-and-text">
                   <img
                     src="/Images/green_flow.png"
@@ -155,7 +158,11 @@ const Grid = () => {
                 </div>
               </div>
             </th>
-            <th className="above-th8 aboveth" colSpan={2} onClick={() => print('Answer a question')}>
+            <th
+              className="above-th8 aboveth"
+              colSpan={2}
+              onClick={() => print("Answer a question")}
+            >
               <div className="th-content2">
                 <div className="img-and-text">
                   <img src="/Images/flow.png" alt="icon" className="th-icon" />
@@ -164,7 +171,10 @@ const Grid = () => {
                 </div>
               </div>
             </th>
-            <th className="above-th10 aboveth col9" onClick={() => print('Extract')}>
+            <th
+              className="above-th10 aboveth col9"
+              onClick={() => print("Extract")}
+            >
               <div className="th-content2">
                 <div className="img-and-text">
                   <img src="/Images/flow.png" alt="icon" className="th-icon" />
@@ -173,12 +183,17 @@ const Grid = () => {
                 </div>
               </div>
             </th>
-            <th className="above-th11 aboveth col10" onClick={() => print('Plus-Icon')}>
+            <th
+              className="above-th11 aboveth col10"
+              onClick={() => print("Plus-Icon")}
+            >
               <img src="/Images/plus.png" alt="icon" className="th-icon" />
             </th>
           </tr>
           <tr>
-            <th className="row-no" onClick={() => print('#')}>#</th>
+            <th className="row-no" onClick={() => print("#")}>
+              #
+            </th>
             {columns.map((col, idx) =>
               idx > 5 && idx < 9 ? (
                 <th

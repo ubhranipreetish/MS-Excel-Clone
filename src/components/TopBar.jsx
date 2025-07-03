@@ -1,7 +1,7 @@
 import "../styles/TopBar.css";
 
 function print(text) {
-    console.log(`Clicked on ${text}`)
+  console.log(`Clicked on ${text}`);
 }
 
 export default function TopBar() {
@@ -9,11 +9,11 @@ export default function TopBar() {
     <>
       <div className="topbar">
         <div className="path">
-          <div className="panel" onClick={() => print('Panel')}>
+          <div className="panel" onClick={() => print("Panel")}>
             <div className="three"></div>
             <div className="one"></div>
           </div>
-          <div className="path-display" onClick={() => print('Path')}>
+          <div className="path-display" onClick={() => print("Path")}>
             <span>Workspace</span>
             <span>&gt;</span>
             <span>Folder 2</span>
@@ -25,11 +25,11 @@ export default function TopBar() {
           </div>
         </div>
         <div className="actions-right">
-          <div className="search" onClick={() => print('Search')}>
+          <div className="search" onClick={() => print("Search")}>
             <img src="/Images/search.png" alt="search" />
             <input type="text" placeholder="Search within sheet" />
           </div>
-          <div className="bell" onClick={() => print('Notifications')}>
+          <div className="bell" onClick={() => print("Notifications")}>
             <span className="badge">2</span>
             <img
               src="/Images/bell.png"
@@ -37,7 +37,7 @@ export default function TopBar() {
               alt="Notification Bell"
             />
           </div>
-          <div className="profile-block" onClick={() => print('Profile')}>
+          <div className="profile-block" onClick={() => print("Profile")}>
             <div className="profile-img">
               <img src="/Images/profile_pic.png" alt="Profile Pic" />
             </div>
