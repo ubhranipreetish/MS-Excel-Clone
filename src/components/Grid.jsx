@@ -65,7 +65,7 @@ const grid_content = [
     "www.emilygreenart.com",
     "Tom Wright",
     "Low",
-    "2,800,000 ₹",
+    "15-01-2025",
     "5,900,000 ₹",
   ],
   [
@@ -76,11 +76,14 @@ const grid_content = [
     "www.jessicabrowncreative.com",
     "Kevin Smith",
     "Low",
-    "15-01-2025",
-    "",
-  ],
-  ["", "", "", "", "", "", "", "30-01-2025", ""],
+    "30-01-2025",
+    "2,800,000 ₹"
+  ]
 ];
+
+function print(text) {
+    console.log(`Clicked on ${text}`)
+}
 
 const Grid = () => {
   const [selectedCell, setSelectedCell] = useState({ row: null, col: null });
@@ -102,7 +105,7 @@ const Grid = () => {
       if (!["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key))
         return;
 
-      e.preventDefault(); // keep the page from scrolling
+      e.preventDefault(); 
 
       let { row, col } = selectedCell;
       if (e.key === "ArrowUp") row = Math.max(0, row - 1);
@@ -110,14 +113,12 @@ const Grid = () => {
       if (e.key === "ArrowLeft") col = Math.max(0, col - 1);
       if (e.key === "ArrowRight") col = Math.min(columns.length - 1, col + 1);
 
-      // log & update state
       const address = getCellAddress(row, col);
       const content = getCellContent(row, col);
       console.log(`Cell: ${address}, Content: ${content}`);
 
       setSelectedCell({ row, col });
 
-      // move DOM focus so the user sees the outline in the correct place
       cellRefs.current[row][col]?.focus();
     };
 
@@ -132,7 +133,7 @@ const Grid = () => {
           <tr>
             <th className="above-th1 aboveth"></th>
             <th className="above-th2 aboveth" colSpan={4}>
-              <div className="above-th2-cnt">
+              <div className="above-th2-cnt" onClick={() => print('Q3 Financial Overview')}>
                 <div className="above-th2-content">
                   <img src="/Images/link.png" alt="icon" className="th-icon" />
                   <span>Q3 Financial Overview</span>
@@ -142,7 +143,7 @@ const Grid = () => {
             </th>
             <th className="above-th6 aboveth"></th>
             <th className="above-th7 aboveth">
-              <div className="th-content2">
+              <div className="th-content2" onClick={() => print('ABC')}>
                 <div className="img-and-text">
                   <img
                     src="/Images/green_flow.png"
@@ -154,7 +155,7 @@ const Grid = () => {
                 </div>
               </div>
             </th>
-            <th className="above-th8 aboveth" colSpan={2}>
+            <th className="above-th8 aboveth" colSpan={2} onClick={() => print('Answer a question')}>
               <div className="th-content2">
                 <div className="img-and-text">
                   <img src="/Images/flow.png" alt="icon" className="th-icon" />
@@ -163,7 +164,7 @@ const Grid = () => {
                 </div>
               </div>
             </th>
-            <th className="above-th10 aboveth col9">
+            <th className="above-th10 aboveth col9" onClick={() => print('Extract')}>
               <div className="th-content2">
                 <div className="img-and-text">
                   <img src="/Images/flow.png" alt="icon" className="th-icon" />
@@ -172,18 +173,19 @@ const Grid = () => {
                 </div>
               </div>
             </th>
-            <th className="above-th11 aboveth col10">
+            <th className="above-th11 aboveth col10" onClick={() => print('Plus-Icon')}>
               <img src="/Images/plus.png" alt="icon" className="th-icon" />
             </th>
           </tr>
           <tr>
-            <th className="row-no">#</th>
+            <th className="row-no" onClick={() => print('#')}>#</th>
             {columns.map((col, idx) =>
               idx > 5 && idx < 9 ? (
                 <th
                   key={col}
                   className={`thcol${idx + 1} col`}
                   style={{ backgroundColor: col_heading2[idx - 6].color }}
+                  onClick={() => print(`${col_heading2[idx - 6].title}`)}
                 >
                   {idx > 5 && idx < 9 ? col_heading2[idx - 6].title : col}
                 </th>
@@ -191,6 +193,7 @@ const Grid = () => {
                 <th
                   key={col}
                   className={`custom-th thcol${idx + 1} ${idx === 0 ? "col-a" : "col"}`}
+                  onClick={() => print(`${col_heading1[idx].title}`)}
                 >
                   {col_heading1[idx].title && (
                     <div className="th-content">
@@ -227,7 +230,7 @@ const Grid = () => {
                     );
                     setSelectedCell({ row: rowIdx, col: colIndex });
                   }}
-                  className={`col${colIndex + 1} row${rowIdx + 1} ${
+                  className={`col${colIndex + 1} row${rowIdx + 1} col${colIndex + 1}row${rowIdx + 1} ${
                     selectedCell.row === rowIdx && selectedCell.col === colIndex
                       ? "selected-cell"
                       : ""
